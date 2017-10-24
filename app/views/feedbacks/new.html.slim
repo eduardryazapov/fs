@@ -1,0 +1,14 @@
+.row
+  .medium-5.columns
+    = simple_form_for(feedback) do |f|
+
+      legend
+        | Send Your Feedback
+
+      .form-inputs
+        = f.input :email, required: true, autofocus: true
+        = f.input :name, required: true
+        = f.input :text, as: :text, required: true
+
+      .form-actions
+        = f.button :submit, "Submit feedback"
